@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FRAMECO STUDIO — Arabic typography & visual culture</title>
+<meta name="description" content="FRAMECO STUDIO — Arabic typography and visual culture, made to be framed.">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+<header class="header">
+  <a href="#home" class="logo"><img src="assets/logo.svg" alt="FRAMECO STUDIO"></a>
+  <nav class="nav"><a href="#work">WORK</a><a href="#shop">SHOP</a><a href="#about">ABOUT</a><button class="cart-button" onclick="openCart()">CART (<span id="cart-count">0</span>)</button></nav>
+</header>
+<main>
+<section id="home" class="hero"><div class="hero-text"><p class="eyebrow">FRAMECO STUDIO</p><h1>Arabic typography &<br>visual culture.</h1><p class="hero-description">Made to be framed.</p><a href="#shop" class="button">EXPLORE COLLECTION</a></div><div class="hero-image"><img src="assets/hero.jpg" alt="FrameCo artwork"></div></section>
+<section id="work" class="selected-work"><div class="section-heading"><p class="eyebrow">SELECTED WORK</p><h2>Arabic type.<br>Visual experiments.<br>Cultural references.</h2><p>Exploring Arabic typography beyond language as visual expression.</p><a href="#shop" class="text-link">VIEW WORK →</a></div><div class="work-image"><img src="assets/work.jpg" alt="Selected FrameCo work"></div></section>
+<section id="shop" class="shop"><div class="shop-header"><p class="eyebrow">THE COLLECTION</p></div><div id="product-grid" class="product-grid"></div></section>
+<section id="about" class="about"><div><p class="eyebrow">ABOUT FRAMECO</p><h2>Arabic type.<br>Made to be framed.</h2></div><p>FrameCo Studio explores Arabic typography, visual culture and cultural references through art prints and typographic compositions.</p></section>
+</main>
+<aside id="cart" class="cart"><div class="cart-header"><h2>CART</h2><button onclick="closeCart()">×</button></div><div id="cart-items"></div><div class="cart-footer"><div class="cart-row"><span>Subtotal</span><span id="cart-subtotal">0 JD</span></div><div class="cart-row"><span>Delivery</span><span>3 JD</span></div><div class="cart-total"><span>TOTAL</span><span id="cart-total">0 JD</span></div><button class="button full" onclick="openCheckout()">CHECKOUT</button></div></aside>
+<section id="checkout" class="modal"><div class="modal-inner"><button class="modal-close" onclick="closeCheckout()">×</button><p class="eyebrow">CHECKOUT</p><h2>CONTACT INFORMATION</h2><form id="checkout-form"><input type="text" id="name" placeholder="Full Name" required><input type="email" id="email" placeholder="Email Address" required><h3>SHIPPING ADDRESS</h3><input type="text" id="address" placeholder="Address" required><input type="text" id="city" placeholder="City" required><input type="tel" id="phone" placeholder="Phone Number" required><h3>PAYMENT METHOD</h3><div class="payment-option"><input type="radio" name="payment" checked><div><strong>CliQ</strong><p>Pay instantly through CliQ. You will receive the payment details after placing your order.</p></div></div><button type="submit" class="button full">PLACE ORDER <span id="checkout-total">0 JD</span></button></form></div></section>
+<section id="payment" class="modal"><div class="modal-inner payment"><button class="modal-close" onclick="document.getElementById('payment').classList.remove('active')">×</button><p class="eyebrow">PAYMENT | CLIQ</p><h2>I've completed the payment</h2><p>Please transfer the total amount to the CliQ alias below.</p><div class="payment-box"><div><small>ORDER NUMBER</small><strong id="order-number">#00123</strong></div><div><small>TOTAL AMOUNT</small><strong id="payment-total">0 JOD</strong></div><div><small>CLIQ NAME</small><strong>ABDULLAH RAID MOHAMMAD ALADAILEH</strong></div><div><small>CLIQ ALIAS</small><strong>FRAMECOST</strong></div><div><small>REFERENCE</small><strong id="payment-reference">ORDER #00123</strong></div></div><button class="button full" onclick="completePayment()">I'VE COMPLETED THE PAYMENT</button></div></section>
+<section id="success" class="modal"><div class="modal-inner success"><p class="eyebrow">FRAMECO STUDIO</p><h1>Thank you!</h1><p>Your payment is being verified. We'll process your order shortly.</p><button class="button" onclick="closeSuccess()">BACK TO SHOP</button></div></section>
+<script>window.FRAMECO_PRODUCTS=[{"id":1,"name":"كان لك معايا","desc":"Exploring repetition and rhythm through Arabic letterforms and visual structure.","image":"assets/product-1.jpg"},{"id":2,"name":"عمّان","desc":"A geometric study of Arabic type inspired by the visual character of Amman.","image":"assets/product-2.jpg"},{"id":3,"name":"الدار أمان","desc":"Exploring Arabic letterforms through contrast, proportion, and geometric rhythm.","image":"assets/product-3.jpg"},{"id":4,"name":"سعادة الريس","desc":"A bold typographic composition exploring rhythm, scale, and expressive Arabic forms.","image":"assets/product-4.jpg"},{"id":5,"name":"فراغ","desc":"An exploration of Arabic type and negative space through circular forms and repetition.","image":"assets/product-5.jpg"},{"id":6,"name":"الجمال","desc":"A bold interpretation of Arabic typography, reduced to its essential geometric forms.","image":"assets/product-6.jpg"},{"id":7,"name":"صبر أيوب","desc":"A study of Arabic typography through structure, movement, and layered forms.","image":"assets/product-7.jpg"},{"id":8,"name":"العودة","desc":"A minimal exploration of Arabic type through balance, weight, and negative space.","image":"assets/product-8.jpg"}];</script>
+<script src="app.js"></script>
+</body></html>
