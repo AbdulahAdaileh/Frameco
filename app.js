@@ -94,8 +94,8 @@ function renderCollection() {
         </div>
 
         <div class="product-meta">
-          <span>${p.name}</span>
-          <span>FROM ${A3} JD</span>
+<span class="arabic">${p.name}</span>
+<span>FROM ${A3} JD</span>
         </div>
       </article>
     `
