@@ -1,12 +1,12 @@
 const PRODUCTS = [
-  {id:1,name:'كان لك معايا',desc:'Exploring repetition and rhythm through Arabic letterforms and visual structure.',image:'assets/artwork/artwork-1.jpg',thumb:'assets/collection/collection-1.jpg'},
-  {id:2,name:'عمّان',desc:'A geometric study of Arabic type inspired by the visual character of Amman.',image:'assets/artwork/artwork-8.jpg',thumb:'assets/collection/collection-2.jpg'},
-  {id:3,name:'الدار أمان',desc:'Exploring Arabic letterforms through contrast, proportion, and geometric rhythm.',image:'assets/artwork/artwork-2.jpg',thumb:'assets/collection/collection-3.jpg'},
-  {id:4,name:'سعادة الريس',desc:'A bold typographic composition exploring rhythm, scale, and expressive Arabic forms.',image:'assets/artwork/artwork-3.jpg',thumb:'assets/collection/collection-4.jpg'},
-  {id:5,name:'الجمال',desc:'A bold interpretation of Arabic typography, reduced to its essential geometric forms.',image:'assets/artwork/artwork-5.jpg',thumb:'assets/collection/collection-5.jpg'},
-  {id:6,name:'صبر أيوب',desc:'A study of Arabic typography through structure, movement, and layered forms.',image:'assets/artwork/artwork-6.jpg',thumb:'assets/collection/collection-6.jpg'},
-  {id:7,name:'العودة',desc:'A minimal exploration of Arabic type through balance, weight, and negative space.',image:'assets/artwork/artwork-7.jpg',thumb:'assets/collection/collection-7.jpg'},
-  {id:8,name:'فراغ',desc:'An exploration of Arabic type and negative space through circular forms and repetition.',image:'assets/artwork/artwork-4.jpg',thumb:'assets/collection/collection-8.jpg'}
+  {id:1,name:"كن كفء",desc:"Exploring repetition and rhythm through Arabic letterforms and visual structure.",image:"assets/artwork-1.jpg",thumb:"assets/collection-1.jpg"},
+  {id:2,name:"عمان",desc:"A geometric study of Arabic type inspired by the visual character of Amman.",image:"assets/artwork-2.jpg",thumb:"assets/collection-2.jpg"},
+  {id:3,name:"دار",desc:"Exploring Arabic letterforms through contrast, proportion, and geometric rhythm.",image:"assets/artwork-3.jpg",thumb:"assets/collection-3.jpg"},
+  {id:4,name:"خط",desc:"A bold typographic composition exploring rhythm, scale, and expressive Arabic forms.",image:"assets/artwork-4.jpg",thumb:"assets/collection-4.jpg"},
+  {id:5,name:"مسافة",desc:"A bold interpretation of Arabic typography reduced to its essential geometric forms.",image:"assets/artwork-5.jpg",thumb:"assets/collection-5.jpg"},
+  {id:6,name:"تجريد",desc:"A study of Arabic typography through structure, movement, and layered forms.",image:"assets/artwork-6.jpg",thumb:"assets/collection-6.jpg"},
+  {id:7,name:"ميزان",desc:"A minimal exploration of Arabic type through balance, weight, and negative space.",image:"assets/artwork-7.jpg",thumb:"assets/collection-7.jpg"},
+  {id:8,name:"حروف",desc:"An exploration of Arabic type and negative space through circular forms and repetition.",image:"assets/artwork-8.jpg",thumb:"assets/collection-8.jpg"}
 ];
 const A3=18,A1=28,DELIVERY=3;
 let cart=JSON.parse(localStorage.getItem('frameco-cart')||'[]');
