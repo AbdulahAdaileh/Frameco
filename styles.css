@@ -22,14 +22,13 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  margin: 0;
-  background: #fff;
-  color: #111;
-font-family:"Estedad", Inter, Arial, sans-serif;
--webkit-font-smoothing: antialiased;
+body{
+  margin:0;
+  background:#fff;
+  color:#111;
+  font-family:Inter, Arial, sans-serif;
+  -webkit-font-smoothing:antialiased
 }
-
 body:has(.drawer.active),
 body:has(.overlay.active) {
   overflow: hidden;
@@ -912,4 +911,10 @@ form input {
     flex-direction: column;
     gap: 10px;
   }
+}
+/* Arabic typography */
+.arabic,
+.product-meta .arabic,
+.detail-copy h2 {
+  font-family:"Estedad", Arial, sans-serif;
 }
