@@ -11,4 +11,13 @@
 <div class="overlay" id="checkout"><div class="checkout-inner"><button class="close" id="checkout-close">×</button><div class="eyebrow">CHECKOUT</div><div class="checkout-grid"><div><div id="checkout-summary" class="checkout-summary"><h3>YOUR ORDER</h3><div id="checkout-items"></div><p>Total <strong id="checkout-total">0 JD</strong></p></div></div><form id="checkout-form"><div class="eyebrow">CONTACT INFORMATION</div><div class="fields three"><input required placeholder="Full Name"><input required type="email" placeholder="Email Address"><input required placeholder="Phone Number"></div><div class="eyebrow">SHIPPING ADDRESS</div><input required placeholder="Address"><input required placeholder="City"><div class="eyebrow payment-title">PAYMENT METHOD</div><label class="payment-option"><input type="radio" checked> <span><strong>Pay instantly through CliQ</strong><small>You will receive the payment details after placing your order.</small></span></label><button class="primary wide" type="submit">PLACE ORDER <span id="checkout-total-button">TOTAL</span></button></form></div></div></div>
 <div class="overlay" id="payment"><div class="payment-inner"><div class="eyebrow">PAYMENT | CLIQ</div><div class="payment-grid"><div><h2>Complete your payment<br>using CliQ</h2><p>Please transfer the total amount to the CliQ alias below.</p><div class="pay-detail"><span>ORDER NUMBER</span><b id="order-number">#00123</b></div><div class="pay-detail"><span>TOTAL AMOUNT</span><b id="payment-total">31 JOD</b></div><p class="small">Please use your order number as the payment reference.</p><button class="primary wide" id="payment-done">I’VE COMPLETED THE PAYMENT</button></div><div class="cliq-box"><div><span>CLIQ NAME</span><b>FRAMECO STUDIO</b></div><div><span>CLIQ ALIAS</span><b>FRAMECOST</b><button>COPY ALIAS</button></div><div><span>REFERENCE</span><b id="payment-reference">ORDER #00123</b></div><p>Open your banking app, select CliQ, and transfer the total amount using the alias above.</p></div></div></div></div>
 <div class="overlay" id="success"><div class="success-inner"><h1>Thank you!</h1><p>Your payment is being verified. We’ll process your order shortly.</p><button class="primary" id="success-close">BACK TO HOME</button></div></div>
-<script src="app.js"></script></body></html>
+<script src="app.js"></script><script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script>
+  emailjs.init({
+    publicKey: "Q8ZlH-dxMcVMT0aEF"
+  });
+</script></body></html>
