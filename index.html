@@ -1,35 +1,339 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FRAMECO STUDIO — Arabic typography & visual culture</title>
-<meta name="description" content="FRAMECO STUDIO — Arabic typography and visual culture, made to be framed.">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="responsive.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRAMECO STUDIO</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #111;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      height: 180px;
+      padding: 42px 52px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      background: #f7f7f7;
+    }
+
+    .brand {
+      line-height: .85;
+      letter-spacing: .13em;
+      font-size: 38px;
+      font-weight: 600;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 16px;
+      margin-left: 88px;
+      font-size: 20px;
+      letter-spacing: .38em;
+      font-weight: 400;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 72px;
+      font-size: 22px;
+      letter-spacing: .08em;
+    }
+
+    .cart {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .menu {
+      width: 40px;
+      height: 30px;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .menu span {
+      height: 3px;
+      width: 100%;
+      background: #111;
+      border-radius: 4px;
+    }
+
+    section {
+      padding: 80px 52px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 38% 62%;
+      gap: 42px;
+      align-items: center;
+      min-height: 650px;
+    }
+
+    .eyebrow {
+      font-size: 20px;
+      letter-spacing: .09em;
+      margin-bottom: 36px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(48px, 4.1vw, 82px);
+      line-height: .98;
+      font-weight: 400;
+      letter-spacing: -.045em;
+      max-width: 680px;
+    }
+
+    .hero-copy .tagline {
+      margin-top: 28px;
+      font-size: clamp(28px, 2vw, 40px);
+      line-height: 1.05;
+      font-weight: 600;
+      letter-spacing: -.035em;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 54px;
+      padding: 17px 34px;
+      background: #222;
+      color: #fff;
+      font-size: 16px;
+      letter-spacing: .08em;
+      transition: opacity .2s ease;
+    }
+
+    .btn:hover { opacity: .8; }
+
+    .hero-art {
+      background: #f5f5f5;
+      padding: 48px;
+      overflow: hidden;
+    }
+
+    .hero-art img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .work {
+      background: #f6f6f6;
+      display: grid;
+      grid-template-columns: 38% 62%;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .section-label {
+      font-size: 20px;
+      letter-spacing: .1em;
+      margin-bottom: 90px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(42px, 3.6vw, 70px);
+      line-height: 1.03;
+      font-weight: 400;
+      letter-spacing: -.045em;
+    }
+
+    .work-copy p {
+      max-width: 620px;
+      margin: 54px 0 0;
+      font-size: 24px;
+      line-height: 1.35;
+    }
+
+    .work-art {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .work-art img {
+      width: 100%;
+      height: auto;
+    }
+
+    .collection {
+      padding-top: 90px;
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 34px;
+      margin-top: 42px;
+    }
+
+    .collection-card {
+      background: #f4f4f4;
+      padding: 22px;
+      overflow: hidden;
+    }
+
+    .collection-card img {
+      width: 100%;
+      aspect-ratio: 1.45;
+      object-fit: cover;
+      object-position: center;
+      border: 1px solid #222;
+    }
+
+    .reference-pages {
+      padding-top: 20px;
+    }
+
+    .reference-pages img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      padding: 70px 52px;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      letter-spacing: .08em;
+    }
+
+    @media (max-width: 1000px) {
+      header { height: auto; }
+      nav { gap: 28px; font-size: 15px; }
+      .hero, .work {
+        grid-template-columns: 1fr;
+      }
+      .hero-art { order: 2; }
+      .collection-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 650px) {
+      header {
+        padding: 28px 24px;
+      }
+
+      .brand { font-size: 27px; }
+      .brand small {
+        margin-left: 57px;
+        font-size: 13px;
+      }
+
+      nav a:not(.cart) { display: none; }
+      nav { gap: 15px; }
+      .menu { display: flex; }
+
+      section { padding: 55px 24px; }
+
+      .hero-art { padding: 18px; }
+      .hero-art img { height: 330px; }
+
+      .collection-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .section-label { margin-bottom: 45px; }
+
+      footer {
+        padding: 45px 24px;
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header class="header">
-  <a href="#home" class="logo"><img src="assets/logo.svg" alt="FRAMECO STUDIO"></a>
-  <nav class="nav"><a href="#work">WORK</a><a href="#shop">SHOP</a><a href="#about">ABOUT</a><button class="cart-button" onclick="openCart()">CART (<span id="cart-count">0</span>)</button></nav>
-</header>
-<main>
-<section id="home" class="hero"><div class="hero-text"><p class="eyebrow">FRAMECO STUDIO</p><h1>Arabic typography &<br>visual culture.</h1><p class="hero-description">Made to be framed.</p><a href="#shop" class="button">EXPLORE COLLECTION</a></div><div class="hero-image"><img src="assets/hero.jpg" alt="FrameCo artwork"></div></section>
-<section id="work" class="selected-work"><div class="section-heading"><p class="eyebrow">SELECTED WORK</p><h2>Arabic type.<br>Visual experiments.<br>Cultural references.</h2><p>Exploring Arabic typography beyond language as visual expression.</p><a href="#shop" class="text-link">VIEW WORK →</a></div><div class="work-image"><img src="assets/work.jpg" alt="Selected FrameCo work"></div></section>
-<section id="shop" class="shop"><div class="shop-header"><p class="eyebrow">THE COLLECTION</p></div><div id="product-grid" class="product-grid"></div></section>
-<section id="about" class="about"><div><p class="eyebrow">ABOUT FRAMECO</p><h2>Arabic type.<br>Made to be framed.</h2></div><p>FrameCo Studio explores Arabic typography, visual culture and cultural references through art prints and typographic compositions.</p></section>
-</main>
-<aside id="cart" class="cart"><div class="cart-header"><h2>CART</h2><button onclick="closeCart()">×</button></div><div id="cart-items"></div><div class="cart-footer"><div class="cart-row"><span>Subtotal</span><span id="cart-subtotal">0 JD</span></div><div class="cart-row"><span>Delivery</span><span>3 JD</span></div><div class="cart-total"><span>TOTAL</span><span id="cart-total">0 JD</span></div><button class="button full" onclick="openCheckout()">CHECKOUT</button></div></aside>
-<section id="checkout" class="modal"><div class="modal-inner"><button class="modal-close" onclick="closeCheckout()">×</button><p class="eyebrow">CHECKOUT</p><h2>CONTACT INFORMATION</h2><form id="checkout-form"><input type="text" id="name" placeholder="Full Name" required><input type="email" id="email" placeholder="Email Address" required><h3>SHIPPING ADDRESS</h3><input type="text" id="address" placeholder="Address" required><input type="text" id="city" placeholder="City" required><input type="tel" id="phone" placeholder="Phone Number" required><h3>PAYMENT METHOD</h3><div class="payment-option"><input type="radio" name="payment" checked><div><strong>CliQ</strong><p>Pay instantly through CliQ. You will receive the payment details after placing your order.</p></div></div><button type="submit" class="button full">PLACE ORDER <span id="checkout-total">0 JD</span></button></form></div></section>
-<section id="payment" class="modal"><div class="modal-inner payment"><button class="modal-close" onclick="document.getElementById('payment').classList.remove('active')">×</button><p class="eyebrow">PAYMENT | CLIQ</p><h2>I've completed the payment</h2><p>Please transfer the total amount to the CliQ alias below.</p><div class="payment-box"><div><small>ORDER NUMBER</small><strong id="order-number">#00123</strong></div><div><small>TOTAL AMOUNT</small><strong id="payment-total">0 JOD</strong></div><div><small>CLIQ NAME</small><strong>ABDULLAH RAID MOHAMMAD ALADAILEH</strong></div><div><small>CLIQ ALIAS</small><strong>FRAMECOST</strong></div><div><small>REFERENCE</small><strong id="payment-reference">ORDER #00123</strong></div></div><button class="button full" onclick="completePayment()">I'VE COMPLETED THE PAYMENT</button></div></section>
-<section id="success" class="modal"><div class="modal-inner success"><p class="eyebrow">FRAMECO STUDIO</p><h1>Thank you!</h1><p>Your payment is being verified. We'll process your order shortly.</p><button class="button" onclick="closeSuccess()">BACK TO SHOP</button></div></section>
-<script>window.FRAMECO_PRODUCTS=[{"id":1,"name":"كان لك معايا","desc":"Exploring repetition and rhythm through Arabic letterforms and visual structure.","image":"assets/product-1.jpg"},{"id":2,"name":"عمّان","desc":"A geometric study of Arabic type inspired by the visual character of Amman.","image":"assets/product-2.jpg"},{"id":3,"name":"الدار أمان","desc":"Exploring Arabic letterforms through contrast, proportion, and geometric rhythm.","image":"assets/product-3.jpg"},{"id":4,"name":"سعادة الريس","desc":"A bold typographic composition exploring rhythm, scale, and expressive Arabic forms.","image":"assets/product-4.jpg"},{"id":5,"name":"فراغ","desc":"An exploration of Arabic type and negative space through circular forms and repetition.","image":"assets/product-5.jpg"},{"id":6,"name":"الجمال","desc":"A bold interpretation of Arabic typography, reduced to its essential geometric forms.","image":"assets/product-6.jpg"},{"id":7,"name":"صبر أيوب","desc":"A study of Arabic typography through structure, movement, and layered forms.","image":"assets/product-7.jpg"},{"id":8,"name":"العودة","desc":"A minimal exploration of Arabic type through balance, weight, and negative space.","image":"assets/hall-01.jpg"
-"image":"assets/hall-02.jpg"
-"image":"assets/hall-03.jpg"
-"image":"assets/hall-04.jpg"
-"image":"assets/hall-05.jpg"
-"image":"assets/hall-06.jpg"
-"image":"assets/hall-07.jpg"
-"image":"assets/hall-08.jpg"
-<script src="app.js"></script>
-</body></html>
+  <header>
+    <a class="brand" href="#">
+      FRAMECO
+      <small>STUDIO</small>
+    </a>
+
+    <nav>
+      <a href="#work">WORK</a>
+      <a href="#collection">SHOP</a>
+      <a href="#about">ABOUT</a>
+      <a class="cart" href="#">CART (0)</a>
+      <div class="menu" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <div class="hero-copy">
+        <div class="eyebrow">FRAMECO STUDIO</div>
+        <h1>Arabic typography &amp;<br>visual culture.</h1>
+        <div class="tagline">Made to be framed.</div>
+        <a class="btn" href="#collection">EXPLORE COLLECTION</a>
+      </div>
+
+      <div class="hero-art">
+        <!-- Your uploaded hero.jpg -->
+        <img src="./assets/hero.jpg" alt="FrameCo Arabic typography artwork">
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="work-copy">
+        <div class="section-label">SELECTED WORK</div>
+        <h2>Arabic type.<br>Visual experiments.<br>Cultural references.</h2>
+        <p>Exploring Arabic typography beyond language as visual expression.</p>
+        <a class="btn" href="#collection">VIEW WORK</a>
+      </div>
+
+      <div class="work-art">
+        <!-- Your uploaded page-2 reference -->
+        <img src="./assets/page-2.jpg" alt="Selected FrameCo work">
+      </div>
+    </section>
+
+    <section class="collection" id="collection">
+      <div class="section-label">THE COLLECTION</div>
+
+      <!-- Your uploaded page-3 reference is preserved below as the collection visual. -->
+      <div class="work-art">
+        <img src="./assets/page-3.jpg" alt="FrameCo collection">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>FRAMECO STUDIO</div>
+    <div>ARABIC TYPOGRAPHY &amp; VISUAL CULTURE</div>
+  </footer>
+</body>
+</html>
